@@ -1,0 +1,510 @@
+<style>
+    /*
+ * File: footer.css
+ * Mô tả: Định nghĩa các style cho phần "Thể loại nổi bật" và Footer chính.
+ */
+
+/* --- Cài đặt cơ bản & Utilities --- */
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family và line-height thường được định nghĩa trong style.css chính */
+}
+
+/* Container chung để căn giữa và kiểm soát chiều rộng */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+/* --- Phần "Thể loại nổi bật" (Popular Tags Section) --- */
+.popular-tags-section {
+    background-color: #fff;
+    padding: 30px 0;
+    margin-bottom: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.popular-tags-section .section-title {
+    color: #333;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.popular-tags-section .tags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.popular-tags-section .tag-item {
+    background-color: #f0f0f0;
+    color: #666;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popular-tags-section .tag-item:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* --- Phần Footer chính (Main Footer Section) --- */
+.main-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    border-top: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.main-footer .footer-col {
+    flex: 1;
+    min-width: 280px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.main-footer .footer-section-title { /* Áp dụng chung cho các tiêu đề cột */
+    color: #17a2b8; /* Màu xanh biển */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* --- Cột 1: Logo và Liên kết --- */
+.main-footer .footer-branding-links {
+    flex-basis: 30%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-footer .footer-logo {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #17a2b8;
+    text-decoration: none;
+}
+
+/* .main-footer .footer-logo .logo-image { ... } nếu dùng ảnh */
+
+.main-footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.main-footer .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-link:last-of-type {
+    margin-bottom: 0;
+}
+
+.main-footer .footer-link:hover {
+    color: #ccc;
+}
+
+/* --- Cột 2: Các biểu tượng mạng xã hội --- */
+.main-footer .footer-social-icons-col {
+    flex-basis: 30%;
+    text-align: left;
+}
+
+.main-footer .social-icons-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-footer .social-icon-link-main {
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-footer .social-icon-link-main:hover {
+    color: #ccc;
+    transform: translateY(-2px);
+}
+
+.main-footer .social-icon-main {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+/* --- Cột 3: Về chúng tôi --- */
+.main-footer .footer-about-us-col {
+    flex-basis: 40%;
+    text-align: left;
+}
+
+/* Đã dùng .footer-section-title cho tiêu đề */
+
+.main-footer .footer-about-us-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.main-footer .footer-about-us-text p {
+    margin-bottom: 10px;
+}
+
+/* --- Phần bản quyền (Copyright) --- */
+.main-footer .footer-bottom-inline {
+    background-color: transparent;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-footer .footer-bottom-inline .copyright-text {
+    font-size: 13px;
+    color: #fff;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .main-footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-footer .footer-col {
+        margin: 15px 0;
+        width: 100%;
+        min-width: unset;
+        padding: 0;
+    }
+
+    .main-footer .footer-branding-links,
+    .main-footer .footer-social-icons-col,
+    .main-footer .footer-about-us-col {
+        flex-basis: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-footer .footer-links,
+    .main-footer .social-icons-main {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-footer .footer-logo {
+        text-align: center;
+    }
+
+    .main-footer .footer-about-us-text {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .main-footer .footer-bottom-inline {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        border-top: none;
+        margin-top: 15px;
+    }
+
+    .popular-tags-section .tags-grid {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .popular-tags-section .tag-item {
+        font-size: 14px;
+        padding: 7px 15px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 992px) {
+    .main-footer .footer-col {
+        min-width: 220px;
+        padding: 0 10px;
+    }
+}
+</style>
+
+<div class="popular-tags-section">
+    <div class="container">
+        <h3 class="section-title">Thể loại nổi bật</h3>
+        <div class="tags-grid">
+            <a href="#" class="tag-item" data-category-id="10">Ngôn Tình</a>
+            <a href="#" class="tag-item" data-category-id="11">Nữ Cường</a>
+            <a href="#" class="tag-item" data-category-id="27">Tận Thế</a>
+            <a href="#" class="tag-item" data-category-id="24">Tổng Tài</a>
+            <a href="#" class="tag-item" data-category-id="15">Thanh Xuân Vườn Trường</a>
+            <a href="#" class="tag-item" data-category-id="18">Hôn Nhân</a>
+            <a href="#" class="tag-item" data-category-id="22">Cổ Đại</a>
+            <a href="#" class="tag-item" data-category-id="17">Công Sở</a>
+            <a href="#" class="tag-item" data-category-id="29">Giới Giải Trí</a>
+            <a href="#" class="tag-item" data-category-id="28">Hành Động</a>
+            <a href="#" class="tag-item" data-category-id="26">Hào Môn Thế Gia</a>
+            <a href="#" class="tag-item" data-category-id="3">Dị Năng/Siêu Năng Lực</a>
+            <a href="#" class="tag-item" data-category-id="21">Hài Hước</a>
+            <a href="#" class="tag-item" data-category-id="19">Phiêu Lưu / Sinh Tồn</a>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-col footer-branding-links">
+            <a href="#" class="footer-logo">WEB LORE</a>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Giới thiệu</a>
+                <a href="#" class="footer-link">Điều Khoản</a>
+                <a href="#" class="footer-link">Chính Sách Bảo Mật</a>
+            </div>
+            <div class="footer-bottom-inline">
+                <div class="copyright-text">
+                    © 2025 WEB LORE
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-col footer-social-icons-col">
+            <h3 class="footer-section-title">Liên hệ</h3>
+            <div class="social-icons-main">
+                <a href="#" class="social-icon-link-main" title="Instagram">
+                    <svg viewBox="0 0 24 24" class="social-icon-main"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.223-1.666 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.057-1.266-.069-1.644-.069-4.849 0-3.205.012-3.584.069-4.849.149-3.227 1.666-4.771 4.919-4.919 1.265-.058 1.644-.07 4.849-.07zm0-2.163c-3.21 0-3.622.012-4.85.07-6.551.37-11.268 5.07-11.639 11.639-.058 1.229-.07 1.644-.07 4.85 0 3.209.012 3.622.07 4.85.37 6.551 5.07 11.268 11.639 11.639 1.228.058 1.644.07 4.85.07 3.21 0 3.622-.012 4.85-.07 6.551-.37 11.268-5.07 11.639-11.639.058-1.228.07-1.644.07-4.85 0-3.209-.012-3.622-.07-4.85-.37-6.551-5.07-11.268-11.639-11.639-1.229-.058-1.644-.07-4.85-.07z"/><path d="M12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.402a3.237 3.237 0 110-6.475 3.237 3.237 0 010 6.475z"/></svg>
+                </a>
+                <a href="#" class="social-icon-link-main" title="TikTok">
+                    <svg viewBox="0 0 48 48" class="social-icon-main"><path d="M46.3 15.3c-0.2-1.7-1.3-3.1-2.8-3.7s-3.2-0.3-4.6 0.5c-0.9 0.5-1.8 1.1-2.6 1.7v0.2c0.9 2.7 1.4 5.6 1.5 8.4l0.1 2.9c0 0.6 0 1.1-0.1 1.7 -0.8 3.1-2.8 5.8-5.5 7.6s-6 2.7-9.3 2.8c-1.3 0-2.6-0.3-3.8-0.8 -0.3-2.4-0.6-4.8-0.9-7.1 -0.1-0.7-0.2-1.4-0.3-2.1 -0.6-1.9-1.8-3.6-3.4-4.8s-3.5-1.6-5.5-1.5c-1.4 0.1-2.8 0.6-4.1 1.2 -0.6 0.3-1.1 0.7-1.7 1.1 -0.8 0.5-1.7 0.9-2.5 1.4 -1.4 0.8-2.9 1.7-4.2 2.7 -0.8 0.6-1.5 1.3-2.2 2 -0.3 0.3-0.6 0.6-0.8 0.9l-0.2 0.2c0.5 1.7 1.1 3.4 1.7 5.1 0.4 1 0.8 2 1.2 3 0.9 2.2 2.1 4.2 3.5 6 4.2 5.5 9.8 9.5 16.5 11.6 1.6 0.5 3.3 0.8 5 0.8 6.7 0 12.7-3.8 16.5-9.5 1.5-2.2 2.7-4.5 3.6-7 0.2-0.6 0.3-1.2 0.4-1.8 0.3-2.5 0.6-4.9 0.9-7.4 0.5-1 1.1-2 1.6-3 0.8-1.8 1.5-3.7 2.1-5.5 0.3-0.9 0.6-1.8 0.8-2.7 0.4-1.7 0.3-3.4-0.2-5 -0.2-0.7-0.5-1.4-0.7-2.1 -0.4-1.5-1.4-2.7-2.6-3.4s-2.7-0.7-4.1-0.5c-0.8 0.1-1.6 0.4-2.4 0.6 -0.8 0.3-1.5 0.7-2.3 1.1 -0.5 0.3-1 0.5-1.5 0.8 -0.8 0.4-1.6 0.8-2.3 1.3 -0.7 0.5-1.4 0.9-2.1 1.4 -0.3 0.2-0.6 0.4-0.9 0.6 -0.8 0.4-1.6 0.8-2.4 1.1 -1.5 0.6-3 1.2-4.4 1.6 -0.6 0.2-1.2 0.4-1.8 0.5 -0.4 0.1-0.7 0.3-1.1 0.4 -0.2 0.1-0.4 0.1-0.6 0.2 -1.1 0.3-2.1 0.4-3.2 0.2 -0.6-0.1-1.3-0.2-1.9-0.5z"/></svg>
+                </a>
+                <a href="#" class="social-icon-link-main" title="X">
+                    <svg viewBox="0 0 24 24" class="social-icon-main"><path d="M18.901 1.153c-1.38-.288-2.772-.432-4.164-.432-4.908 0-8.995 4.088-8.995 8.996 0 2.227.818 4.33 2.302 5.924C4.316 19.467 2.052 21.054 0 22.428c3.275 0 6.398-1.57 8.358-4.225 1.583.109 3.167.109 4.75 0 2.871-1.139 4.908-3.966 4.908-7.228 0-.435-.043-.86-.118-1.272 1.385-1.077 2.476-2.585 3.18-4.256-.474.24-1.002.404-1.55.497.545-.326.965-.87.965-1.503 0-.67-.272-1.28-.707-1.716C19.782 2.296 19.34 1.68 18.901 1.153zm-4.75 3.328c.954.195 1.898.536 2.793 1.018-1.066.697-2.316 1.055-3.618 1.055-1.29 0-2.528-.358-3.585-1.042.894-.486 1.837-.827 2.79-.997 1.046-.176 2.09-.176 3.12-.034zm-5.632 1.34c-1.38.804-2.593 1.79-3.57 2.924 1.488.583 3.03.906 4.636.906 1.606 0 3.149-.323 4.636-.906-1.02-1.168-2.228-2.146-3.57-2.924-1.046-.176-2.09-.176-3.132-.008zm1.096 9.482c-1.87 2.083-2.993 4.542-3.326 7.234 1.776-.904 3.447-2.062 4.956-3.468 1.509-1.405 2.825-2.955 3.92-4.633-.94.137-1.9.205-2.868.205-1.92 0-3.79-.623-5.382-1.57zm5.63-2.052c1.298-.445 2.536-.97 3.69-1.567-1.12-1.545-2.59-2.736-4.275-3.504-1.685-.768-3.52-.962-5.385-.56-1.865.402-3.565 1.305-4.995 2.65-.968 1.127-1.67 2.38-2.096 3.738C6.91 14.545 8.16 15.07 9.458 15.515c1.173.402 2.368.618 3.568.618s2.396-.216 3.568-.618z"/></svg>
+                </a>
+                <a href="#" class="social-icon-link-main" title="Facebook">
+                    <svg viewBox="0 0 24 24" class="social-icon-main"><path d="M22.675 0H1.325C0.593 0 0 0.593 0 1.325v21.35C0 23.407 0.593 24 1.325 24h11.494v-9.294H9.421v-3.622h3.898V8.413c0-3.897 2.377-6.037 5.88-6.037 1.652 0 3.093.124 3.523.178v3.051h-2.09a1.786 1.786 0 00-1.785 1.931v3.426h3.565l-.465 3.622h-3.1V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                </a>
+                <a href="#" class="social-icon-link-main" title="Youtube">
+                    <svg viewBox="0 0 24 24" class="social-icon-main"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-6.156 3.886-6.156 7.719 0 3.834 2.26 7.453 6.156 7.719 3.604.248 11.631.248 15.23 0 3.897-.266 6.156-3.886 6.156-7.719 0-3.834-2.26-7.453-6.156-7.719zM12 15.404v-8.808l4.145 4.404-4.145 4.404z"/></svg>
+                </a>
+                <a href="#" class="social-icon-link-main" title="Pinterest">
+                    <svg viewBox="0 0 24 24" class="social-icon-main"><path d="M12.07 2.72c-5.19 0-9.39 4.2-9.39 9.4 0 3.3 2.05 6.1 5.19 7.5l.2-.1v-2.2h-2.8v-2.7h2.8v-1.8c0-2.7 1.6-4.1 4.1-4.1 1.1 0 2.2.2 3 .8v2.5h-1.7c-1.3 0-1.6.6-1.6 1.6v1.5h3.2l-.4 2.2h-2.9v2.3l3.8 1.5c-3.2 2.4-7.1 2.2-9.9-.7z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-col footer-about-us-col">
+            <h3 class="footer-about-us-title">Về chúng tôi</h3>
+            <p class="footer-about-us-text">Là nơi chúng tôi chia sẻ những câu chuyện do chính đội ngũ sáng tạo của mình thực hiện. Mỗi tác phẩm là tâm huyết và sự kết hợp giữa ý tưởng và kỹ năng của những người bạn đam mê truyện tranh. Chúng tôi cam kết mang đến những nội dung độc đáo và chất lượng cao, hoàn toàn được tạo ra bởi chúng tôi.</p>
+            <p class="footer-about-us-text">Hãy cùng khám phá thế giới truyện tranh đầy màu sắc và những cuộc phiêu lưu hấp dụng tại WEB LORE!</p>
+        </div>
+    </div>
+
+
+<script>
+ /*
+ * File: standalone-footer/footer.js
+ * Mô tả: Xử lý tương tác người dùng cho các tag thể loại ở footer.html
+ * và cho bộ lọc thể loại/trạng thái trên trang chính.
+ * Sử dụng AJAX để tải và hiển thị danh sách truyện động.
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const storyListContainer = document.getElementById('story-list-container');
+    const filterForm = document.getElementById('filter-form');
+    const filterTheLoaiDropdown = document.getElementById('filter_the_loai_dropdown');
+    const filterTrangThaiDropdown = document.getElementById('filter_trang_thai_dropdown');
+
+    // --- Hàm tiện ích: Tạo HTML cho thẻ truyện ---
+    function createStoryCardHtml(story) {
+        // Đảm bảo tên các thuộc tính khớp với tên cột trả về từ footer.php (sử dụng AS)
+        const imageUrl = story.anh_bia || 'placeholder.jpg'; // Đảm bảo tên thuộc tính khớp PHP
+        const description = story.mo_ta || 'Mô tả không có.'; // Đảm bảo tên thuộc tính khớp PHP
+        const statusClass = (story.trang_thai === 'Hoàn thành') ? 'status-hoan-thanh' : 'status-dang-ra';
+
+        return `
+            <div class="truyen-item">
+                <img src="${htmlspecialchars(imageUrl)}" alt="${htmlspecialchars(story.ten_truyen || 'Truyện')}" class="truyen-cover">
+                <h2><a href="chi_tiet_truyen.php?id=${story.id ?? ''}">${htmlspecialchars(story.ten_truyen ?? 'Tên truyện không có')}</a></h2>
+                <p>Tác giả: ${htmlspecialchars(story.ten_tac_gia ?? 'Không rõ')}</p>
+                <p>Thể loại: ${htmlspecialchars(story.the_loai_str ?? 'Chưa xác định')}</p>
+                <p>Trạng thái: <span class="story-status ${statusClass}">${htmlspecialchars(story.trang_thai ?? 'Không rõ')}</span></p>
+                <p class="truyen-mo-ta">${htmlspecialchars(description)}</p>
+                <p><a href="sua_truyen.php?id=${story.id ?? ''}" class="button">Sửa Truyện</a>
+                <a href="xoa_truyen.php?id=${story.id ?? ''}" class="button" onclick="return confirm('Bạn có chắc chắn muốn xóa truyện này và tất cả các chương của nó không?');">Xóa Truyện</a></p>
+            </div>
+        `;
+    }
+
+    // --- Hàm tiện ích: Escape ký tự HTML ---
+    function htmlspecialchars(str) {
+        if (typeof str !== 'string') return str;
+        return str.replace(/&/g, "&amp;")
+                   .replace(/</g, "&lt;")
+                   .replace(/>/g, "&gt;")
+                   .replace(/"/g, "&quot;")
+                   .replace(/'/g, "&#039;");
+    }
+
+    // --- Hàm chính: Tải và hiển thị truyện qua AJAX ---
+    // Hàm này bây giờ nhận cả categoryId và trangThai
+    async function fetchAndDisplayStories(categoryId = null, trangThai = null) {
+        if (!storyListContainer) {
+            console.error('Lỗi: Không tìm thấy vùng chứa truyện với ID "story-list-container".');
+            return;
+        }
+
+        let url = 'standalone-footer/footer.php'; // Hoặc một file PHP xử lý AJAX chung, ví dụ 'fetch_stories.php'
+        const params = new URLSearchParams();
+
+        if (categoryId) {
+            params.append('category_id', categoryId);
+        }
+        if (trangThai) {
+            params.append('trang_thai', trangThai);
+        }
+
+        url += '?' + params.toString();
+
+        try {
+            console.log('Đang gửi yêu cầu AJAX đến:', url);
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Lỗi HTTP! Trạng thái: ${response.status}. Phản hồi: ${errorText}`);
+            }
+
+            const stories = await response.json();
+            console.log('Dữ liệu truyện nhận được:', stories);
+
+            storyListContainer.innerHTML = ''; // Xóa nội dung cũ
+            if (Array.isArray(stories) && stories.length > 0) {
+                stories.forEach(story => {
+                    storyListContainer.innerHTML += createStoryCardHtml(story);
+                });
+            } else {
+                storyListContainer.innerHTML = '<p>Không tìm thấy truyện nào theo tiêu chí lọc.</p>';
+            }
+
+            // Cập nhật URL trình duyệt (mà không tải lại trang)
+            const newUrl = new URL(window.location.href);
+            if (categoryId) {
+                newUrl.searchParams.set('filter_the_loai', categoryId);
+            } else {
+                newUrl.searchParams.delete('filter_the_loai');
+            }
+            if (trangThai) {
+                newUrl.searchParams.set('filter_trang_thai', trangThai);
+            } else {
+                newUrl.searchParams.delete('filter_trang_thai');
+            }
+            window.history.pushState({ path: newUrl.href }, '', newUrl.href);
+
+            // Cập nhật trạng thái của dropdown lọc ở đầu trang
+            if (filterTheLoaiDropdown) {
+                filterTheLoaiDropdown.value = categoryId ? categoryId : "";
+            }
+            if (filterTrangThaiDropdown) {
+                filterTrangThaiDropdown.value = trangThai ? trangThai : "";
+            }
+
+        } catch (error) {
+            console.error('Lỗi khi tải truyện:', error);
+            storyListContainer.innerHTML = `<p>Đã xảy ra lỗi khi tải truyện: ${error.message}. Vui lòng kiểm tra Console và Network tab để biết chi tiết.</p>`;
+        }
+    }
+
+    // --- Xử lý sự kiện: Khi click vào tag thể loại ở footer ---
+    document.addEventListener('click', function(event) {
+        const targetTagItem = event.target.closest('.tag-item');
+        if (targetTagItem) {
+            event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+            const categoryId = targetTagItem.dataset.categoryId; // Lấy ID thể loại từ data-attribute
+            console.log('Đã click vào tag với ID:', categoryId);
+            // Khi click tag, chỉ lọc theo thể loại, trạng thái giữ nguyên từ dropdown hiện tại
+            const currentTrangThai = filterTrangThaiDropdown ? filterTrangThaiDropdown.value : null;
+            fetchAndDisplayStories(categoryId, currentTrangThai);
+        }
+    });
+
+    // --- Xử lý sự kiện: Khi form lọc được submit (hoặc dropdown thay đổi) ---
+    if (filterForm) {
+        // Bắt sự kiện submit của form (khi nhấn nút Lọc)
+        filterForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn hành vi mặc định của form
+            const selectedTheLoaiId = filterTheLoaiDropdown.value;
+            const selectedTrangThai = filterTrangThaiDropdown.value;
+            console.log('Lọc form - Thể loại:', selectedTheLoaiId, 'Trạng thái:', selectedTrangThai);
+            fetchAndDisplayStories(selectedTheLoaiId, selectedTrangThai);
+        });
+
+        // Bắt sự kiện thay đổi của dropdown thể loại (tùy chọn, có thể bỏ nếu chỉ muốn lọc khi nhấn nút)
+        filterTheLoaiDropdown.addEventListener('change', function() {
+            const selectedTheLoaiId = this.value;
+            const selectedTrangThai = filterTrangThaiDropdown.value;
+            console.log('Dropdown Thể loại thay đổi - Thể loại:', selectedTheLoaiId, 'Trạng thái:', selectedTrangThai);
+            fetchAndDisplayStories(selectedTheLoaiId, selectedTrangThai);
+        });
+
+        // Bắt sự kiện thay đổi của dropdown trạng thái (tùy chọn, có thể bỏ nếu chỉ muốn lọc khi nhấn nút)
+        filterTrangThaiDropdown.addEventListener('change', function() {
+            const selectedTheLoaiId = filterTheLoaiDropdown.value;
+            const selectedTrangThai = this.value;
+            console.log('Dropdown Trạng thái thay đổi - Thể loại:', selectedTheLoaiId, 'Trạng thái:', selectedTrangThai);
+            fetchAndDisplayStories(selectedTheLoaiId, selectedTrangThai);
+        });
+    }
+
+
+    // --- Khởi tạo ban đầu: Tải truyện khi trang được load dựa trên URL ---
+    const initialUrlParams = new URLSearchParams(window.location.search);
+    const initialCategoryId = initialUrlParams.get('filter_the_loai');
+    const initialTrangThai = initialUrlParams.get('filter_trang_thai');
+    fetchAndDisplayStories(initialCategoryId, initialTrangThai); // Tải truyện dựa trên URL hiện tại
+});
+</script>
+</footer>
